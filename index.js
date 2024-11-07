@@ -29,23 +29,32 @@ let computerScore = 0;
 function playRound(HumNumb, compNumb) {
     if (compNumb == 'Paper' && HumNumb == 'Rock') {
         console.log('You Lose! Paper beats Rock');
+        computerScore++;
     }
     else if (compNumb == 'Paper' && HumNumb == 'Scissors') {
         console.log('You Win! Scissors beats Paper');
+        humanScore++;
     }
     else if (compNumb == 'Rock' && HumNumb == 'Scissors') {
         console.log('You Lose! Rock beats Scissors');
+        computerScore++
     }
     else if (compNumb == 'Rock' && HumNumb == 'Paper') {
         console.log('You Win! Paper beats Rock');
+        humanScore++;
     }
     else if (compNumb == 'Scissors' && HumNumb == 'Rock') {
         console.log('You Win! Rock beats Scissors');
+        humanScore++;
     }
     else if (compNumb == 'Scissors' && HumNumb == 'Paper') {
-        console.log('You Lose! Scissors beats Paper');}
+        console.log('You Lose! Scissors beats Paper');
+        computerScore++;
+    }
     else {
         console.log('Tie game! Try again');
     }
     }
 playRound(HumNumb, compNumb);
+console.log('Your score is ' + humanScore);
+console.log('The computer score is ' + computerScore);
